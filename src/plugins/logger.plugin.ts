@@ -1,5 +1,6 @@
-const winston = require('winston');
-const { combine, timestamp,  prettyPrint , json } = winston.format;
+import winston, { format } from 'winston';
+
+const { combine, timestamp,  prettyPrint , json } = format;
 
 
 const logger = winston.createLogger({
@@ -31,12 +32,12 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-module.exports = function buildLogger(service) {
+export const buildLogger = (service: string) => {
   return {
-    log: (message) => {
+    log: (message: string ) => {
       logger.log('info', {message, service});
     },
-    error: (message) => {
+    error: (message: string ) => {
       logger.log('error', {
         message, 
         service,
@@ -45,6 +46,5 @@ module.exports = function buildLogger(service) {
       });
     },        
   }
-
 }
 

@@ -12,6 +12,7 @@
   "author": "Fernando Herrera",
   "license": "MIT",
   "devDependencies": {
+    "@types/uuid": "^9.0.7",
     "nodemon": "^3.0.1",
     "rimraf": "^5.0.5",
     "ts-node": "^10.9.1"
