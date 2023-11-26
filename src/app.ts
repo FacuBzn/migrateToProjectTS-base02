@@ -1,4 +1,4 @@
-import { buildLogger } from "./plugins/logger.plugin";
+/* import { buildLogger } from "./plugins/logger.plugin"; */
 
 /* const { getAge, getUUID } = require('./plugins'); */
 
@@ -11,10 +11,10 @@ import { buildLogger } from "./plugins/logger.plugin";
 
 
 
-const logger = buildLogger('app');
+/* const logger = buildLogger('app');
 
 logger.log('Hola mundo');
-logger.error('Error critico');
+logger.error('Error critico'); */
 
 
 /* getPokemonById(4)
